@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>StudentDash</h2>
+
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Jadwal Kuliah</li>
+        <li>Tugas</li>
+        <li>Catatan</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <div>
+          <h1>Dashboard Mahasiswa</h1>
+          <p>Kelola jadwal, tugas, dan progress belajarmu.</p>
+        </div>
+
+        <button id="showTaskFormBtn">+ Tambah Tugas</button>
+      </header>
+
+      <section class="task-form" id="taskForm">
+        <input type="text" id="taskTitle" placeholder="Nama tugas..." />
+        <input type="date" id="taskDeadline" />
+        <button id="addTaskBtn">Tambah</button>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h3>Total Tugas</h3>
+          <p id="totalTasks">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Tugas Selesai</h3>
+          <p id="completedTasks">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Belum Selesai</h3>
+          <p id="pendingTasks">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Progress</h3>
+          <p id="progressText">0%</p>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel">
+          <h2>Jadwal Kuliah</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Mata Kuliah</th>
+                <th>Hari</th>
+                <th>Jam</th>
+                <th>Ruangan</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Pemrograman Web</td>
+                <td>Senin</td>
+                <td>08.00</td>
+                <td>Lab 1</td>
+              </tr>
+
+              <tr>
+                <td>Basis Data</td>
+                <td>Rabu</td>
+                <td>10.00</td>
+                <td>R.204</td>
+              </tr>
+
+              <tr>
+                <td>Jaringan Komputer</td>
+                <td>Jumat</td>
+                <td>13.00</td>
+                <td>Lab 2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel">
+          <h2>Daftar Tugas</h2>
+          <div id="taskList"></div>
+        </div>
+      </section>
+
+      <section class="bottom-grid">
+        <div class="panel">
+          <h2>Progress Belajar</h2>
+
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+
+          <p id="progressDescription">Progress semester saat ini: 0%</p>
+        </div>
+
+        <div class="panel">
+          <h2>Catatan Harian</h2>
+
+          <textarea id="dailyNote" placeholder="Tulis catatan hari ini..."></textarea>
+          <button class="save-btn" id="saveNoteBtn">Simpan Catatan</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
